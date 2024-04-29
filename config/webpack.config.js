@@ -478,6 +478,7 @@ module.exports = function (webpackEnv) {
                   : isEnvDevelopment,
                 modules: {
                   mode: 'icss',
+                  localIdentName: '[name]__[local]--[hash:base64:5]'
                 },
               }),
               // Don't consider CSS imports dead code even if the
@@ -497,7 +498,7 @@ module.exports = function (webpackEnv) {
                   : isEnvDevelopment,
                 modules: {
                   mode: 'local',
-                  getLocalIdent: getCSSModuleLocalIdent,
+                  localIdentName: '[name]__[local]--[hash:base64:5]'
                 },
               }),
             },
