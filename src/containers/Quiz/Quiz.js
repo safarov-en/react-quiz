@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import ActiveQuiz from '../../components/ActiveQuiz/ActiveQuiz';
 import FinishedQuiz from '../../components/FinishedQuiz/FinishedQuiz';
 import classes from './Quiz.module.css';
-import { act } from 'react-dom/test-utils';
 
 class Quiz extends Component {
     state = {
