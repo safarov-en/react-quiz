@@ -1,6 +1,6 @@
 import {Component} from "react";
 import {connect} from "react-redux";
-import { Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { logout } from "../../store/actions/auth";
 
 class Logout extends Component {
@@ -8,7 +8,7 @@ class Logout extends Component {
         this.props.logout();
     }
     render() {
-        return <Route path="/" element={<Navigate to="/" />} />
+        return <Routes><Route path="/" element={<Navigate to="/" />} /></Routes>
     }
 }
 
