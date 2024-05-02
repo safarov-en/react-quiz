@@ -12,7 +12,7 @@ export function auth(email, password, isLogin) {
         }
         const pesponse = await axios.post(url, authData);
         const data = pesponse.data;
-        const expirationDate = new Date(new Date().getItem() + data.expriseIn * 1000)
+        const expirationDate = new Date(new Date().getTime() + data.expiresIn * 1000)
         localStorage.setItem('token', data.idToken);
         localStorage.setItem('userId', data.localId);
         localStorage.setItem('expirationDate', expirationDate);
@@ -43,4 +43,8 @@ export function authSuccess(token) {
         type: AUTH_SUCCESS,
         token
     }
+}
+
+export function autoLogin() {
+    
 }
